@@ -1,20 +1,20 @@
 local wezterm = require("wezterm")
 local keybindings = require("config.keybindings")
 
-require("config.right-status").setup()
-require("config.tab-tittle").setup()
+-- require("config.right-status").setup()
+-- require("config.tab-tittle").setup()
 
 local config = {
-	font_size = 19,
+	font_size = 18,
 	line_height = 1.0,
 	-- font = wezterm.font("OperatorMono Nerd Font", { weight = "Light" }),
-  font = wezterm.font("JetBrainsMono Nerd Font", { weight = 325 }),
+  font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Light" }), -- 325
 	font_rules = {
 		{
 			italic = true,
 			font = wezterm.font({
-				family = "OperatorMono Nerd Font",
-				weight = "Book",
+				family = "FiraCode Nerd Font",
+				-- weight = "Book",
 			}),
 		},
 	},
@@ -35,22 +35,13 @@ local config = {
 		top = 0,
 		bottom = 0,
 	},
-	initial_cols = 100,
-	initial_rows = 30,
+	initial_cols = 110,
+	initial_rows = 32,
 	enable_csi_u_key_encoding = true,
 
 	-- keybindings
 	disable_default_key_bindings = true,
 	keys = keybindings,
-	-- Middle mouse button pastes the clipboard.
-	-- Note that this is the default so you needn't copy this.
-	mouse_bindings = {
-		{
-			event = { Up = { streak = 1, button = "Middle" } },
-			mods = "NONE",
-			action = wezterm.action.Paste,
-		},
-	},
 }
 
 return config

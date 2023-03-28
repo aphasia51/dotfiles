@@ -19,6 +19,12 @@ alias pip=pip3
 alias nivm=nvim
 alias n=nvim
 alias vim=nvim
+alias nv=nvim
+
+alias nvim="~/workspace/lua/nvim-macos/bin/nvim"
+alias n="~/workspace/lua/nvim-macos/bin/nvim"
+alias nv="~/workspace/lua/nvim-macos/bin/nvim"
+alias vim="~/workspace/lua/nvim-macos/bin/nvim"
 
 # === Git
 alias gc="git clone"
@@ -58,11 +64,14 @@ alias bd="brew upgrade"
 px () {
   export http_proxy="http://127.0.0.1:7890"
   export https_proxy=$http_proxy
+  export all_proxy="socks5://127.0.0.1:7890"
   echo "All Proxy on"
 }
 # noproxy
 pf () {
   unset http_proxy
   unset https_proxy
+  unset all_proxy
   echo "All Proxy off"
 }
+

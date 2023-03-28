@@ -53,8 +53,8 @@ return {
 		action = act.ActivatePaneDirection("Down"),
 	},
 
-	{ key = "v", mods = "CMD", action = wezterm.action.Paste },
-	{ key = "c", mods = "CMD", action = wezterm.action.Copy },
+	{ key = "v", mods = "CMD", action = wezterm.action.PasteFrom 'Clipboard' },
+	{ key = "c", mods = "CMD", action = wezterm.action.CopyTo 'ClipboardAndPrimarySelection' },
 
 	-- Font size
 	{ key = "-", mods = "CMD", action = wezterm.action.DecreaseFontSize },

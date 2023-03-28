@@ -15,6 +15,10 @@ source /opt/homebrew/bin/virtualenvwrapper.sh
 
 # === Brew
 export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+export HOMEBREW_NO_INSTALL_FROM_API=1
 
 # === kitty
 # export XTERM=xterm-kitty
+
+# temp
+export MXSHOP_DEBUG=true
