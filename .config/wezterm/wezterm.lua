@@ -8,7 +8,7 @@ local config = {
 	font_size = 18,
 	line_height = 1.0,
 	-- font = wezterm.font("OperatorMono Nerd Font", { weight = "Light" }),
-  font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Light" }), -- 325
+  font = wezterm.font("JetBrainsMono Nerd Font"), -- 325
 	font_rules = {
 		{
 			italic = true,
@@ -18,13 +18,15 @@ local config = {
 			}),
 		},
 	},
+  window_background_opacity = 0.92,
+  macos_window_background_blur = 30,
 
 	adjust_window_size_when_changing_font_size = false,
 	window_decorations = "RESIZE",
 	enable_tab_bar = true,
   tab_max_width = 36,
   use_fancy_tab_bar = false,
-	hide_tab_bar_if_only_one_tab = false,
+	hide_tab_bar_if_only_one_tab = true,
 	color_scheme = "Whimsy",
 	colors = {
 		background = "#262a33",
